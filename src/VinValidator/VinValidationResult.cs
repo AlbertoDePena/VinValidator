@@ -3,13 +3,13 @@ namespace Numaka.VinValidator
     /// <summary>
     /// VIN validation result
     /// </summary>
-    public class ValidationResult
+    public class VinValidationResult
     {
         /// <summary>
         /// VIN validation result
         /// </summary>
         /// <param name="error">VIN validation error</param>
-        internal ValidationResult(ValidationError? error = null)
+        internal VinValidationResult(VinValidationError? error = null)
         {
             Error = error;
         }
@@ -18,7 +18,7 @@ namespace Numaka.VinValidator
         /// VIN validation error
         /// </summary>
         /// <value></value>
-        public ValidationError? Error { get; }
+        public VinValidationError? Error { get; }
 
         /// <summary>
         /// Is it a valid validation result?
@@ -30,13 +30,13 @@ namespace Numaka.VinValidator
         /// Create a valid VIN validation result
         /// </summary>
         /// <returns></returns>
-        internal static ValidationResult Valid() => new ValidationResult();
+        internal static VinValidationResult Valid() => new VinValidationResult();
 
         /// <summary>
         /// Create an invalid VIN validation result
         /// </summary>
         /// <param name="error"></param>
         /// <returns></returns>
-        internal static ValidationResult Invalid(ValidationError error) => new ValidationResult(error);
+        internal static VinValidationResult Invalid(VinValidationError error) => new VinValidationResult(error);
     }
 }

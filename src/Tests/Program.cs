@@ -18,7 +18,7 @@
                 return;
             }
 
-            var validationResult = Validator.Validate(vin);
+            var validationResult = VinValidator.Validate(vin);
             
             Console.WriteLine($"VIN Provided:     {vin}");
 	        Console.WriteLine($"Is Valid:         {validationResult.IsValid}");

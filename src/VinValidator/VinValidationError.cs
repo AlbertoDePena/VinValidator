@@ -3,7 +3,7 @@ namespace Numaka.VinValidator
     /// <summary>
     /// VIN validation error
     /// </summary>
-    public enum ValidationError
+    public enum VinValidationError
     {
         /// Unknown
         Unknown = 0,

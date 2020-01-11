@@ -5,42 +5,42 @@ namespace Numaka.VinValidator
     /// <summary>
     /// VIN Validator
     /// </summary>
-    public static class Validator
+    public static class VinValidator
     {
         /// <summary>
         /// Validate a vehicle identification number
         /// </summary>
         /// <param name="vin">The vehicle identification number</param>
         /// <returns>Validation result</returns>
-        public static ValidationResult Validate(string vin)
+        public static VinValidationResult Validate(string vin)
         {
             try
             {
                 if (string.IsNullOrWhiteSpace(vin))
                 {
-                    return ValidationResult.Invalid(ValidationError.NullOrEmpty);
+                    return VinValidationResult.Invalid(VinValidationError.NullOrEmpty);
                 }
 
                 if (vin.Length != 17)
                 {
-                    return ValidationResult.Invalid(ValidationError.InvalidLength);
+                    return VinValidationResult.Invalid(VinValidationError.InvalidLength);
                 }
 
                 if (!Regex.IsMatch(vin, "[A-HJ-NPR-Z0-9]{13}[0-9]{4}"))
                 {
-                    return ValidationResult.Invalid(ValidationError.InvalidPattern);
+                    return VinValidationResult.Invalid(VinValidationError.InvalidPattern);
                 }
 
                 if (GetCheckDigit(vin) != vin[8])
                 {
-                    return ValidationResult.Invalid(ValidationError.InvalidCheckDigit);
+                    return VinValidationResult.Invalid(VinValidationError.InvalidCheckDigit);
                 }
 
-                return ValidationResult.Valid();
+                return VinValidationResult.Valid();
             }
             catch
             {
-                return ValidationResult.Invalid(ValidationError.Unknown);
+                return VinValidationResult.Invalid(VinValidationError.Unknown);
             }
         }
 
