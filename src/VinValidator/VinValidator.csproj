@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Numaka.VinValidator</AssemblyName>
+    <RootNamespace>Numaka.VinValidator</RootNamespace>
+    <Version>1.0.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>VIN validator library</Description>
+    <!-- NuGet settings -->
+    <PackageId>Numaka.VinValidator</PackageId>
+    <PackageProjectUrl>https://github.com/AlbertoDePena/VinValidator</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/AlbertoDePena/VinValidator</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
